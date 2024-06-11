@@ -15,9 +15,12 @@ About App,
 This is AI Art App, where your can see all the ai generated art, 
 
 #Components
-Headers => For Header
-Hero Section => For Top section with input and button in it.
-Categories => Button which you can select arts based on category.
-AiArt => Main Art List which is coming from cognise ai server. When you scroll down you can see more ai art, based on scroll (Pagination).
+Headers => For Header,
+
+Hero Section => For Top section with input and button in it,
+
+Categories => Button which you can select arts based on category,
+
+AiArt => Main Art List which is coming from cognise ai server. When you scroll down you can see more ai art, based on scroll (Pagination),
 
  
