@@ -1,6 +1,8 @@
 import React from "react";
 import "./heroSection.css";
+import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-hero-section">
       <h1>AI Art Generator</h1>
@@ -11,7 +13,7 @@ const HeroSection = () => {
       </p>
       <div className="input-button">
         <input type="text" placeholder="Enter prompt here..." />
-        <button>Generate</button>
+        <button onClick={() => navigate("/generate-ai")}>Generate</button>
       </div>
     </div>
   );

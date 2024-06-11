@@ -62,20 +62,25 @@ const ArtList = ({ activeCategory }) => {
           if (items.length === index + 1) {
             return (
               <div className="inner-art-list" key={index} ref={lastAIArt}>
-                <img
-                  src={`https://cognise.art/${item?.images[0]?.image}`}
-                  alt={item.generation_info?.prompt}
-                />
+                <div className="image-container">
+                  <img
+                    src={`https://cognise.art/${item?.images[0]?.image}`}
+                    alt={item.generation_info?.prompt}
+                  />
+                </div>
+
                 <p>{item.generation_info?.prompt}</p>
               </div>
             );
           } else {
             return (
               <div className="inner-art-list" key={index}>
-                <img
-                  src={`https://cognise.art/${item?.images[0]?.image}`}
-                  alt={item.generation_info?.prompt}
-                />
+                <div className="image-container">
+                  <img
+                    src={`https://cognise.art/${item?.images[0]?.image}`}
+                    alt={item.generation_info?.prompt}
+                  />
+                </div>
                 <p>{item.generation_info?.prompt}</p>
               </div>
             );
