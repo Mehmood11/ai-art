@@ -17,7 +17,7 @@ This is AI Art App, where your can see all the ai generated art,
 #Components
 Headers => For Header,
 
-Hero Section => For Top section with input and button in it,
+Hero Section => For Top section with input and button in it, Click on Generate Button to go to next page.
 
 Categories => Button which you can select arts based on category,
 
