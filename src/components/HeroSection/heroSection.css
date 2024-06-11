@@ -1,0 +1,93 @@
+.main-hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  width: 100%;
+}
+.main-hero-section h1 {
+  font-size: 50px;
+  margin: 10px;
+}
+.main-hero-section p {
+  font-size: 20px;
+  text-align: center;
+  max-width: 900px;
+  color: #666666;
+}
+.main-hero-section .input-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+  width: 65%;
+  margin-top: 15px;
+}
+.main-hero-section .input-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #e67050 0%, #db2268 100%);
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+.main-hero-section .input-button::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: white;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.main-hero-section .input-button input {
+  flex: 1;
+  padding: 10px;
+  height: 20px;
+  border: none;
+  outline: none;
+}
+.main-hero-section .input-button button {
+  background: linear-gradient(90deg, #e67050 0%, #db2268 100%);
+  width: 120px;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  align-self: stretch;
+}
+
+@media (max-width: 628px) {
+  .main-hero-section {
+    padding: 7px;
+  }
+  .main-hero-section .input-button {
+    padding: 10px;
+  }
+  .main-hero-section h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .main-hero-section p {
+    font-size: 16px;
+  }
+  .main-hero-section .input-button button {
+    width: 80px;
+  }
+  .main-hero-section .input-button,
+  .main-hero-section p {
+    width: auto;
+  }
+}

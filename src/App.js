@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Headers from "./components/Headers";
+import HeroSection from "./components/HeroSection";
+import Categories from "./components/Category";
+import ArtList from "./components/ArtList";
+import InfiniteScroll from "./test";
+
+const categories = [
+  "mobile",
+  "Realistic",
+  "Science Fiction",
+  "Cartoon",
+  "Anime",
+  "Oil Painting",
+  "Landscape",
+];
 
 function App() {
+  const [activeCategory, setActiveCategory] = useState("mobile");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-app">
+      <Headers />
+      <HeroSection />
+      <h1 className="main-category-text">{activeCategory}</h1>
+      <Categories
+        categories={categories}
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+      />
+      <ArtList activeCategory={activeCategory} />
+      {/* <InfiniteScroll /> */}
     </div>
   );
 }
